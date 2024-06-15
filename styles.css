@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap");
+
+:root {
+  --white-color: #fff;
+  --button-correct: #5aae76;
+  --button-wrong: #e13e3e;
+  --button-hover: #aaa;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(162.44deg, #3b4cca 0%, #ff3535 100%);
+  color: var(--white-color);
+}
+
+.container {
+  max-width: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.header {
+  margin: 0;
+  font-family: "Rammetto One", sans-serif;
+  font-size: 6vw;
+  font-weight: 400;
+}
+
+#pokemonImage {
+  width: 80%;
+  height: auto;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  height: 52px;
+  margin: 10px;
+  width: calc(40% - 20px);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4vw;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  color: var(--white-color);
+}
+
+button.correct {
+  background-color: var(--button-correct);
+  color: var(--white-color);
+}
+
+button.wrong {
+  background-color: var(--button-wrong);
+  color: var(--white-color);
+}
+
+#loadingContainer {
+  height: 300px;
+}
+
+#points {
+  margin: 0;
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+#loadingIcon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 20%;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .header {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 17px;
+  }
+
+  #points {
+    font-size: 24px;
+  }
+
+  #loadingIcon {
+    width: 200px;
+    height: 200px;
+  }
+}
